@@ -51,7 +51,7 @@ class IssuesExportController < ApplicationController
       directory = mf.make_directory()
       file_path = './' + directory + '.zip'
       make_csv(csv, directory, mf.get_folder_name())
-      #make_totalcsv(csv, directory)
+      make_totalcsv(csv, directory)
       mf.save_attached_file()
 
       zf = ZipFileGenerator.new('./tmp/' + directory, file_path)

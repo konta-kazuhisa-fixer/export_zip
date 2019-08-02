@@ -18,7 +18,7 @@ module MakeCSV
   end
 
   def make_totalcsv(csv,directory_name)
-    CSV.open('./tmp/' + directory_name + '/issue.csv', 'w', encoding:"cp932") do |newcsv|
+    CSV.open('./tmp/' + directory_name + '/total_issue.csv', 'w', encoding:"cp932") do |newcsv|
       CSV.parse(Redmine::CodesetUtil.to_utf8(csv, 'CP932'), :headers => true, :return_headers => true) do |row|
         if row.header_row?
           newcsv << row.fields + [t(:label_history)]
