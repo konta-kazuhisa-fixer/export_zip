@@ -1,0 +1,17 @@
+<div class='contextual'>
+  <%= link_to(l(:label_export_zip),
+    {:controller => 'issues_export', :action => 'export_zip', :project_id => project, :columns => 'all'},
+    :onclick => "showModal('export-zip-options', '330px'); return false;")
+   %>
+</div>
+
+<div id="export-zip-options" style="display:none;">
+  <h3 class="title"><%= l(:label_export_zip) %></h3>
+  <%= form_tag({:controller => 'issues_export', :action => 'export_zip'}, :method => :get, :id => 'csv-export-form') do %>
+  <p class="buttons">
+    <%= submit_tag l(:button_export), :name => nil, :onclick => "hideModal(this);" %>
+    <%= submit_tag l(:button_cancel), :name => nil, :onclick => "hideModal(this);", :type => 'button' %>
+  </p>
+  <% end %>
+</div>
+
