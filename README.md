@@ -30,9 +30,12 @@ In addition to the existing function of downloading ticket information of Redmin
   ![image](https://user-images.githubusercontent.com/49511424/62345879-ecf34600-b52e-11e9-874b-df4ae868ed59.png)
   
 - 管理画面で`ロールと権限`を選択します。  
-  ![image](https://user-images.githubusercontent.com/49511424/62346285-87a05480-b530-11e9-8f5f-7cafa9c550b1.png)
-  
-  ![image](https://user-images.githubusercontent.com/49511424/62346555-87548900-b531-11e9-9255-ac160b9bf2f9.png)
-  
-  
-  ![image](https://user-images.githubusercontent.com/49511424/62346199-2f695280-b530-11e9-9f4d-1477d9d28e5b.png)
+  ![image](https://user-images.githubusercontent.com/49511424/62346285-87a05480-b530-11e9-8f5f-7cafa9c550b1.png)  
+  次にこのPluginを使用するユーザーのロールを選択します。  
+  ![image](https://user-images.githubusercontent.com/49511424/62346555-87548900-b531-11e9-9255-ac160b9bf2f9.png)  
+  `権限 > プロジェクト`の中にある`Export zip`のチェックボックスにチェックを入れます。  
+  ![image](https://user-images.githubusercontent.com/49511424/62437993-75b4f080-b780-11e9-8367-1388dc2928e6.png)
+  変更を保存して、ダウンロードしたいプロジェクトのチケット一覧のページへ行くと右下にPluginが表示されます。  
+  ![image](https://user-images.githubusercontent.com/49511424/62346199-2f695280-b530-11e9-9f4d-1477d9d28e5b.png)  
+  `zipファイル出力`をクリックし、`エクスポート`をクリックするとダウンロードが始まります。
+  ![image](https://user-images.githubusercontent.com/49511424/62440789-91be8f00-b78c-11e9-8b2a-4865b3b5d313.png)
