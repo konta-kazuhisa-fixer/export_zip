@@ -2,8 +2,8 @@
 
 ## Feature
 
-- Redmineのチケット情報をCSVでダウンロードする既存の機能に加えて、CSVに履歴情報の記述追加と、チケット毎の添付ファイルをファルダ毎にまとめてダウンロードできるようにしました。  
-In addition to the existing function of downloading ticket information of Redmine in CSV format, added description of history information to CSV, and attached file for each ticket can be downloaded collectively by folder.
+- このプラグインは既存のCSVダウンロード機能に履歴情報の記述追加と、チケット毎の添付ファイルをフォルダ毎にまとめてダウンロードする機能を追加したものです。  
+This plug-in is a function that adds the description of history information to the existing CSV download function and the function to download the attached files for each ticket in a folder.
 
 ## Introduction Method
 
@@ -25,7 +25,7 @@ In addition to the existing function of downloading ticket information of Redmin
 ## How To Use
 
 - 導入しただけでは、表示されません。  
-　表示するために、管理者権限をもったユーザーでログインします。  
+　表示するために、Redmineの管理者権限をもったユーザーでログインします。  
   管理者ユーザーの場合のみ表示されているメニューバーの`管理`からRedmineの管理画面を開きます。  
   It is not displayed just by introducing it.  
   Log in as a user with administrator privileges to view.  
@@ -47,3 +47,44 @@ In addition to the existing function of downloading ticket information of Redmin
 - `zipファイル出力`をクリックし、`エクスポート`をクリックするとダウンロードが始まります。  
   Click `zip file output` and click` Export` to start downloading.  
   ![image](https://user-images.githubusercontent.com/49511424/62440789-91be8f00-b78c-11e9-8b2a-4865b3b5d313.png)
+
+## Example
+
+- 例えば、以下のようなチケットの情報をダウンロードするとします。  
+  `test2` `test3` `test_child2`が添付ファイルのあるチケットです。  
+  For example, suppose you download the following ticket information:  
+  `test2`` test3` `test_child2` is a ticket with an attached file.  
+  ![image](https://user-images.githubusercontent.com/49511424/62679427-6687aa00-b9ef-11e9-837f-97d2a3f358dc.png)  
+
+- ダウンロードしたzipファイル内は以下のようになっています。  
+  チケット毎にフォルダ分けされ、その中に履歴付きのチケットのcsvファイルと添付ファイルがあるチケットのフォルダには添付ファイルが入っています。  
+  また、ダウンロードしたzipファイルの直下には全チケットの履歴付き詳細csvがあります。  
+  The downloaded zip file is as follows.  
+  Each ticket is divided into folders, and in the ticket folder there is a csv file and attached file of the ticket with history.  
+  In addition, there is a detailed csv with history of all tickets directly under the downloaded zip file.  
+  ![image](https://user-images.githubusercontent.com/49511424/62680856-33dfb080-b9f3-11e9-8336-797c79d20313.png)  
+    ```
+    10-4.zip/
+       ├ total_issue.csv
+       ├ [4]test1/
+       │　   └ issue.csv
+       ├ [5]test2/
+       │　   ├ [5]190802141416_14bf74ff8036099e3c358bbf4e4f9cbe.txt
+       │　   ├ [5]190802141416_77bc4b7cbce851f69fad073c9864561f.txt
+       │　   ├ [5]190802141416_754e8177c3f7dd99f7ec0f475b191494.txt
+       │　   ├ [5]190802141416_62053ae95d6e3092021809169fb36f38.txt
+       │　   └ issue.csv
+       ├ [6]test3/
+       │　   ├ [6]190808151044_14bf74ff8036099e3c358bbf4e4f9cbe.txt
+       │　   ├ [6]190808151044_77bc4b7cbce851f69fad073c9864561f.txt
+       │　   └ issue.csv
+       ├ [7]test_child/
+       │　   └ issue.csv
+       ├ [8]test_child2/
+       │　   ├ [8]190808151200_7a426066492a2b39c0963f7f06a107d3.xls
+       │　   └ issue.csv
+       ├ [9]test4/
+       │　   └ issue.csv
+       └[10]test5/
+            └ issue.csv
+    ```
