@@ -41,6 +41,8 @@ class IssuesExportController < ApplicationController
                               :order => sort_clause, 
                               :offset => @offset, 
                               :limit => @limit)
+      
+      params["description"] = "1"
       if respond_to?(:query_to_csv) # Redmine 2.3 later
         csv = query_to_csv(@issues, @query, params)
       else
