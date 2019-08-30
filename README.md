@@ -21,6 +21,17 @@ This plug-in is a function that adds the description of history information to t
   ```
 - 問題なくインストールが完了したら、Redmineを再起動させて下さい。以上で導入は終了です。  
   If installation is complete without problems, please restart Redmine. This is the end of the introduction.
+
+### 再起動のやり方(CentOS限定)
+
+- Redmineのルートディレクトリから以下の操作をしていきます。  
+  `tmp`ディレクトリに移動します。この階層で`restart.txt`という名前で空のテキストファイルを作成します。
+  ```
+  cd tmp
+  touch restart.txt
+  ```
+  空の`restsart.txt`ファイルをトリガーにRedmineが再起動されるので、作成後にRedmineに再アクセスしてください。
+  これで再起動が行われます。
   
 ## How To Use
 
@@ -88,3 +99,15 @@ This plug-in is a function that adds the description of history information to t
        └[10]test5/
             └ issue.csv
     ```
+    
+## How to delete
+
+- このプラグインを削除する手段は、git cloneしてきたフォルダをすべて消すことです。  
+  Redmineのルートディレクトリから以下の操作を行います。  
+  プラグインのフォルダが存在するディレクトリに移動します。  
+  `export_zip`という名前のディレクトリをディレクトリ丸ごと削除します。
+  ```
+  cd plugins
+  rm -rf export_zip
+  ```
+  削除した後Redmineを再起動してPluginが表示されないことを確認してください。
