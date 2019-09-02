@@ -64,7 +64,7 @@ This plug-in is a function that adds the description of history information to t
 - 例えば、以下のようなチケットの情報をダウンロードするとします。  
   `test2` `test3` `test_child2`が添付ファイルのあるチケットです。  
   For example, suppose you download the following ticket information:  
-  `test2`` test3` `test_child2` is a ticket with an attached file.  
+  `test2` ` test3` `test_child2` is a ticket with an attached file.  
   ![image](https://user-images.githubusercontent.com/49511424/62679427-6687aa00-b9ef-11e9-837f-97d2a3f358dc.png)  
 
 - ダウンロードしたzipファイル内は以下のようになっています。  
